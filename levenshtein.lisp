@@ -58,7 +58,7 @@
                                                   (cond ((equal item1 item2)
                                                          (list* (first edit/) (list +static+ item1) (rest edit/)))
                                                         ((and (listp item1) (listp item2))
-                                                         (list* (first edit/) (diff_trees item1 item2) (rest edit/)))
+                                                         (list* (1+ (first edit/)) (diff_trees item1 item2) (rest edit/)))
                                                         (t (list* (1+ (first edit/)) (list +update+ item1 item2) (rest edit/)))))
                                                  ((edit_minp edit- edit+ edit/)
                                                   (list* (1+ (first edit-)) (list +delete+ item1) (rest edit-)))
