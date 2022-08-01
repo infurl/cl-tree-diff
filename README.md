@@ -3,7 +3,10 @@ Tree structure comparison using Levenshtein distance.
 
 Analyze the differences between two symbolic tree structures. 
 
-The raw result can be used to reconstruct either input or print a human comprehensible summary of the differences.
+The raw result can be used to reconstruct either input or print a human readable summary of the differences.
+
+Originally inspired by the example here https://rosettacode.org/wiki/Levenshtein_distance#Common_Lisp
+
 ```
 (diff_trees '((cat)) '((cat)))                 ; => (0 (:= (cat)))
 (diff_trees '((cat)) '((dog)))                 ; => (1 (1 (:/ cat dog)))
