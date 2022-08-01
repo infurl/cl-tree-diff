@@ -3,7 +3,7 @@ Tree structure comparison using Levenshtein distance.
 
 Analyze the differences between two symbolic tree structures. 
 
-The raw result can be used to reconstruct either file or print a human comprehensible summary of the differences.
+The raw result can be used to reconstruct either input or print a human comprehensible summary of the differences.
 ```
 (diff_trees '((cat)) '((cat)))                 ; => (0 (:= (cat)))
 (diff_trees '((cat)) '((dog)))                 ; => (0 (1 (:/ cat dog)))
